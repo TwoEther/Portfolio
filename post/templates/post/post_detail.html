@@ -1,0 +1,80 @@
+{% extends 'post/base.html' %}
+{% load static %}
+{% block body %}
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Portfoio Details</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Portfoio Details</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{{post.image1.url}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{post.image2.url}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{post.image3.url}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{post.image4.url}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{post.image5.url}}" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>{{post.proj_title}}</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Stack</strong>: {{post.proj_stack}}</li>
+                <li><strong>Project date</strong> {{post.proj_date}}</li>
+                <li><strong>Project URL</strong>: <a href="#">{{post.proj_url}}</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>This is an example of portfolio detail</h2>
+              <p>
+                {{post.proj_exp}}
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

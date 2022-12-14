@@ -18,6 +18,9 @@ from django.urls import path, include
 import post.views as views
 
 app_name = "post"
+
 urlpatterns = [
-    path('', views.index, name='home'),
+    path('', views.PostList.as_view(), name='home'),
+    path('<int:pk>/', views.PostDetail.as_view(), name='detail'),
+    # path('detail/', views.detail, name='detail'),
 ]
