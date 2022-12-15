@@ -10,7 +10,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Portfoio Details</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{% url 'post:home' %}">Home</a></li>
             <li>Portfoio Details</li>
           </ol>
         </div>
@@ -55,22 +55,23 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>{{post.proj_title}}</h3>
+              <p>{{post.proj_title}}<p>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Stack</strong>: {{post.proj_stack}}</li>
-                <li><strong>Project date</strong> {{post.proj_date}}</li>
-                <li><strong>Project URL</strong>: <a href="#">{{post.proj_url}}</a></li>
+                <li><strong>카테고리</strong>: 웹사이트</li>
+                <li><strong>기술 스택</strong>: {{post.proj_stack}}</li>
+                <li><strong>Project date</strong> {{post.proj_start}} ~ {{post.proj_end}}</li>
+                <li><strong>Project URL</strong>: <a href="{{post.proj_url}}">{{post.proj_url}}</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>프로젝트 설명</h2>
               <p>
                 {{post.proj_exp}}
               </p>
             </div>
+            <span style="height:100px"><i class="bi bi-arrow-left-circle-fill"><a href="{% url 'post:home'%}">뒤로가기</i></span>
           </div>
-
+          
         </div>
 
       </div>

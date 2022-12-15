@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Post(models.Model):
+    head_image = models.ImageField(upload_to='post/images', null=True)
     image1 = models.ImageField(upload_to='post/images')
     image2 = models.ImageField(upload_to='post/images')
     image3 = models.ImageField(upload_to='post/images')
