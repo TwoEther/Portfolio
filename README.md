@@ -1,4 +1,4 @@
-<h1>개인 포트폴리오 사이트 구축 프로젝트</h1>
+<h1>개인 포트폴리오 사이트 구축</h1>
 
 <h3><a href='http://www.98coding.com'>www.98coding.com</a><h3>
 
